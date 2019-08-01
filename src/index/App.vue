@@ -3,14 +3,27 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <div @click="gostores">去门店</div>
     </div>
     <router-view/>
   </div>
 </template>
+<script>
+export default {
+  name: "app",
+  components: {},
+  mounted() {},
+  methods: {
+    gostores() {
+      window.location = "http://localhost:8082/subpage.html";
+    }
+  },
+};
+</script>
 
 <style lang="less">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;

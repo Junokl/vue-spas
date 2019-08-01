@@ -3,10 +3,24 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+      <div @click="goindex">去主页面</div>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  name: "subpage",
+  components: {},
+  mounted() {},
+  methods: {
+    goindex() {
+      window.location = "http://localhost:8082/index.html";
+    }
+  },
+};
+</script>
 
 <style lang="less">
 #app {
