@@ -1,23 +1,48 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <loading v-if="isloading" />
+    <transition :name="transitionName" >
+    	<router-view ></router-view>
+    </transition>
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
       <div @click="gostores">去门店</div>
-    </div>
-    <router-view/>
+    </div> -->
+    <!-- <router-view/> -->
   </div>
 </template>
 <script>
-export default {
-  name: "app",
-  components: {},
-  mounted() {},
-  methods: {
+  import { mapState } from "vuex";
+  import loading from '../components/loading/isloading.vue';
+  export default {
+		name: 'app',
+		data(){
+			return {
+				 transitionName: 'slide-left'
+			}
+		},
+		components: {
+			loading
+    },
+    methods: {
     gostores() {
-      window.location = "http://localhost:8082/subpage.html";
-    }
-  },
+      window.location = "http://localhost:8085/subpage.html";
+      },
+    },
+		watch: {
+			'$route' (to, from) {
+				const toDepth = to.path.split('/').length
+				const fromDepth = from.path.split('/').length
+				this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+				window.scrollTo(0,0);
+			}
+		},
+		computed:{
+			...mapState([
+				'isloading'
+			])
+		},
 };
 </script>
 

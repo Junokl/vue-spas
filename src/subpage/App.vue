@@ -16,7 +16,7 @@ export default {
   mounted() {},
   methods: {
     goindex() {
-      window.location = "http://localhost:8082/index.html";
+      window.location = "http://localhost:8085/index.html";
     }
   },
 };
