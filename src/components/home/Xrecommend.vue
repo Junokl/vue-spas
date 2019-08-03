@@ -265,7 +265,6 @@
   display: block;
   white-space: nowrap;
   display: inline-block;
-  vertical-align: bottom;
 }
 
 .artisan-item .level-star-component {

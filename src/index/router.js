@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 import Mine from './views/Mine.vue'
 import Cat from './views/Cat.vue'
+import Register from './views/Register.vue'
+import login from './views/Login.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -21,13 +23,37 @@ export default new Router({
     {
       path: '/Mine',
       name: 'Mine',
-      component: Mine
+      component: Mine,
+      // children: [{
+      //         // 当 /user/:id/profile 匹配成功，
+      //         // UserProfile 会被渲染在 User 的 <router-view> 中
+      //         path: 'register',
+      //         name: 'register',
+      //         component: Register
+      //       },
+      //       // {
+      
+      //       //   path: 'doctor',
+      //       //   name: 'doctor',
+      //       //   component: ListChannel
+      //       // }
+      //     ]
     },
     
     {
       path: '/Cat',
       name: 'Cat',
       component: Cat
+    },
+    {
+      path: '/Register',
+      name: 'Register',
+      component: Register
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
     },
     // {
     //   path: '/detail',

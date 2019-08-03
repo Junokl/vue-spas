@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <img src="@/assets/logo.png">
+    <!-- <img src="@/assets/logo.png"> -->
     <HelloWorld msg="多页面测试页"/>
   </div>
 </template>

@@ -163,7 +163,7 @@
 	}
 
 	.navbar-component .links > a .wrapper {
-		line-height: 1.5;
+		/* line-height: 1.5; */
 		margin: auto;
 	}
 

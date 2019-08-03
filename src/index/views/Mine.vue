@@ -112,7 +112,8 @@
 	
 	.tab-page .sec-user .user .box-avatar {
 	  width: 3rem;
-	  height: 3rem;
+		height: 3rem;
+		line-height: 3rem;
 	  position: relative;
 	  background: #999;
 	  border: 1px solid #565654;
