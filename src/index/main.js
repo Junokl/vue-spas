@@ -3,6 +3,18 @@ import App from './App.vue'
 import router from './router'
 // import store from '@/store'
 import Axios from 'axios';
+
+// import {Calendar} from 'element-ui';
+// import 'element-ui/lib/theme-chalk/index.css';
+
+// // Vue.component(Calendar.name, Calendar);
+// Vue.use(Calendar);
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
+
 import Mint from 'mint-ui';
 Vue.use(Mint);
 

@@ -1,24 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import About from './views/About.vue'
 import Mine from './views/Mine.vue'
 import Cat from './views/Cat.vue'
 import Register from './views/Register.vue'
 import login from './views/Login.vue'
+import Ordermonth from './views/Ordermonth.vue'
+import Listdetail from '../components/Order/Listdetail.vue'
+import workType from './views/workType.vue'
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
   routes: [
     {
-      path: '/',
+      path: '/index.html',
       redirect: 'home'
     }, //  碰到#/重定向到#/home
     {
       path: '/home',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/subpage',
+      beforeEnter(to,from,next){
+        window.location = '/subpage.html'
+      }
+    },
+    {
+      path: '/index',
+      beforeEnter(to,from,next){
+        window.location = '/index.html'
+      }
     },
     {
       path: '/Mine',
@@ -54,6 +68,21 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login
+    },
+    {
+      path: '/Ordermonth',
+      name: 'Ordermonth',
+      component: Ordermonth
+    },
+    {
+      path: '/Listdetail',
+      name: 'Listdetail',
+      component: Listdetail
+    },
+    {
+      path: '/workType',
+      name: 'workType',
+      component: workType
     },
     // {
     //   path: '/detail',

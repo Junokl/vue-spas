@@ -7,7 +7,7 @@
 <script>
 import axios from "axios";
 import XTopbar from "../../components/home/XTopbar.vue";
-import Xnavbar from "../../components/home/Xnavbar.vue";
+import Xnavbar from "../../components/home/Xnavbar1.vue";
 export default {
   data() {
     return {
