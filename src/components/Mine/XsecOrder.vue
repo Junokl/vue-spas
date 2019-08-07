@@ -12,7 +12,7 @@
 						<path d="M128 342.881v-.119h-5.067a2.923 2.923 0 0 0-2.933 2.925 2.931 2.931 0 0 0 2.933 2.925h3.345A9.99 9.99 0 0 1 118 353c-5.523 0-10-4.477-10-10v-4.65h20v4.531zm-4.5 4.269c-.828 0-1.5-.655-1.5-1.463s.672-1.462 1.5-1.462 1.5.654 1.5 1.462c0 .808-.672 1.463-1.5 1.463zM117.013 337l4.889-4 3.442 4h-8.331zm.506-1.894L115.205 337h-2.416l1.504-3.294 3.226 1.4z"
 						 transform="translate(-105 -330)" fill="url(#id-17a)" fill-rule="evenodd"></path>
 					</svg></span><strong>工种设置</strong></a>
-					<a class="await" href="?filter=beforeService#/orders"><span class="SVGInline"><svg
+					<a class="await" href="/mystore"><span class="SVGInline"><svg
 					 class="SVGInline-svg" style="width: 1.3rem;height: 1.3rem;" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<defs>
 							<linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="id-16a">
@@ -34,7 +34,7 @@
 						<path d="M191 351h2v1c0 .552-.444 1-1 1-.552 0-1-.444-1-1v-1zm6 0h2v1c0 .552-.444 1-1 1-.552 0-1-.444-1-1v-1zm3-9.002a2 2 0 0 1 2.005-1.998H205v6.002a1.998 1.998 0 0 1-1.998 1.998h-.997a1.996 1.996 0 0 1-2.005-1.998v-4.004zM191 345h8v1.2a2.8 2.8 0 0 0 2.8 2.8h.2c0 1.105-1.895 2-3 2h-8c-1.105 0-3-.895-3-2h.2a2.8 2.8 0 0 0 2.8-2.8V345zm-3-6v-5h14v5h-.2a2.8 2.8 0 0 0-2.8 2.8v2.2h-8v-2.2a2.8 2.8 0 0 0-2.8-2.8h-.2zm-3 2.998V340h2.995c1.107 0 2.005.887 2.005 1.998v4.004a2 2 0 0 1-2.005 1.998h-.997a1.998 1.998 0 0 1-1.998-1.998v-4.004z"
 						 transform="translate(-182 -330)" fill="url(#id-15a)" fill-rule="evenodd"></path>
 					</svg></span><strong>订单管理</strong></a>
-					<a class="to-comment" href="?filter=needComment#/orders"><span class="SVGInline"><svg
+					<a class="to-comment" href="/user"><span class="SVGInline"><svg
 					 class="SVGInline-svg" style="width: 1.3rem;height: 1.3rem;" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<defs>
 							<linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="id-14a">

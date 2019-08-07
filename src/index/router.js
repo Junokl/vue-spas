@@ -8,6 +8,10 @@ import login from './views/Login.vue'
 import Ordermonth from './views/Ordermonth.vue'
 import Listdetail from '../components/Order/Listdetail.vue'
 import workType from './views/workType.vue'
+import user from './views/user.vue'
+import mystore from './views/mystore.vue'
+import staffWroking from './views/staffWroking.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -84,6 +88,22 @@ export default new Router({
       name: 'workType',
       component: workType
     },
+    {
+      path: '/user',
+      name: 'user',
+      component: user
+    },
+    {
+      path: '/mystore',
+      name: 'mystore',
+      component: mystore
+    },
+    {
+      path: '/staffWroking',
+      name: 'staffWroking',
+      component: staffWroking
+    },
+    
     // {
     //   path: '/detail',
     //   name: 'detail',

@@ -50,8 +50,14 @@ body {
   content: "";
   display: block;
   clear: both;
+  background: #fff !important;
 }
-
+.mt-10{
+  margin-top: 10px;
+}
+.el-message-box{
+  width: 330px !important;
+}
 @import url("../assets/home.css");
 @import url("https://unpkg.com/element-ui/lib/theme-chalk/index.css");
 
