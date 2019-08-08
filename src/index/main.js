@@ -15,6 +15,9 @@ import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI);
 
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies)
+
 import Mint from 'mint-ui';
 Vue.use(Mint);
 
@@ -41,6 +44,7 @@ const store = new Vuex.Store({
 		arr: [],
 		isloading: true,
 		isShowMu: true,
+		location:[],
 	},
 	// 修改状态
 	mutations: {
@@ -52,7 +56,10 @@ const store = new Vuex.Store({
 		},
 		editiShowMu(state, data) {
 			state.isShowMu = data
-		}
+		},
+		editlocation(state, data) {
+			state.location = data
+		},
 
 
 	},
@@ -64,6 +71,9 @@ const store = new Vuex.Store({
 		setloading(context, data) {
 			context.commit('editisloading', data);
 		},
+		setlocation(context, data) {
+			context.commit('editlocation', data);
+		},
 
 	},
 	// 组件从store(中介)手上拿数据  配个 computed
@@ -73,7 +83,10 @@ const store = new Vuex.Store({
 		},
 		getShowMu: state => {
 			return state.isShowMu
-		}
+		},
+		getLocation: state => {
+			return state.location
+		},
 
 	}
 })

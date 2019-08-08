@@ -7,7 +7,6 @@
 					<div class="bd">
 						<XtopBar status="login" />
 						<Xlogin />
-						<div class="bottom-logo"></div>
 					</div>
 				</section>
 			</div>
@@ -194,9 +193,6 @@
 		animation: slide-from-bottom 100ms;
 	}
 
-	.popup-component.login.light .content .bottom-logo {
-		display: none;
-	}
 
 	.login-container {
 		background: #f7f7f7;
@@ -366,7 +362,10 @@
 	.login-container .code-login-container .input-cont .title-wrap {
 		margin-bottom: 1.5rem;
 	}
-
+.button.disabled.inverted, .button[disabled].inverted{
+	background: skyblue !important;
+    color: #fff !important;
+}
 	.login-container .code-login-container .input-cont .title-wrap .subtitle {
 		color: #C3902C;
 		font-size: 0.8rem;
@@ -532,17 +531,6 @@
 		float: right;
 	}
 
-	.login-container .bottom-logo {
-		height: 2.8rem;
-		width: 100%;
-		background-image: url( //www.helijia.com/mobile/app/resources/images/login/hlj-logo.png);
-			-webkit-background-size: auto 100%;
-		background-size: auto 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		position: relative;
-		margin-top: 18%;
-	}
 
 	.login-container .agreement-container {
 		position: absolute;

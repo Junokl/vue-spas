@@ -8,7 +8,6 @@
 						<XtopBar status="register" />
 						<XregisterContainer status="register" />	
 						<!-- <Xlogin status="false" /> -->
-						<div class="bottom-logo"></div>
 					</div>
 				</section>
 			</div>
@@ -197,9 +196,6 @@
 		animation: slide-from-bottom 100ms;
 	}
 
-	.popup-component.login.light .content .bottom-logo {
-		display: none;
-	}
 
 	.login-container {
 		background: #f7f7f7;
@@ -533,18 +529,6 @@
 		font-size: 0.7rem;
 		color: #999;
 		float: right;
-	}
-
-	.login-container .bottom-logo {
-		height: 2.8rem;
-		width: 100%;
-		background-image: url( //www.helijia.com/mobile/app/resources/images/login/hlj-logo.png);
-			-webkit-background-size: auto 100%;
-		background-size: auto 100%;
-		background-repeat: no-repeat;
-		background-position: center;
-		position: relative;
-		margin-top: 18%;
 	}
 
 	.login-container .agreement-container {

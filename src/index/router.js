@@ -7,6 +7,7 @@ import Register from './views/Register.vue'
 import login from './views/Login.vue'
 import Ordermonth from './views/Ordermonth.vue'
 import Listdetail from '../components/Order/Listdetail.vue'
+import Maps from '../components/Map/Map.vue'
 import workType from './views/workType.vue'
 import user from './views/user.vue'
 import mystore from './views/mystore.vue'
@@ -28,13 +29,13 @@ export default new Router({
     },
     {
       path: '/subpage',
-      beforeEnter(to,from,next){
+      beforeEnter(to, from, next) {
         window.location = '/subpage.html'
       }
     },
     {
       path: '/index',
-      beforeEnter(to,from,next){
+      beforeEnter(to, from, next) {
         window.location = '/index.html'
       }
     },
@@ -50,14 +51,14 @@ export default new Router({
       //         component: Register
       //       },
       //       // {
-      
+
       //       //   path: 'doctor',
       //       //   name: 'doctor',
       //       //   component: ListChannel
       //       // }
       //     ]
     },
-    
+
     {
       path: '/Cat',
       name: 'Cat',
@@ -96,14 +97,19 @@ export default new Router({
     {
       path: '/mystore',
       name: 'mystore',
-      component: mystore
+      component: mystore,
     },
     {
       path: '/staffWroking',
       name: 'staffWroking',
       component: staffWroking
     },
-    
+    {
+      path: 'Maps',
+      name: 'Maps',
+      component: Maps
+    },
+
     // {
     //   path: '/detail',
     //   name: 'detail',
@@ -121,14 +127,14 @@ export default new Router({
     //       component: ListChannel
     //     },
     //     {
-  
+
     //       path: 'doctor',
     //       name: 'doctor',
     //       component: ListChannel
     //     }
     //   ]
-  
+
     // },
-    
+
   ]
 })

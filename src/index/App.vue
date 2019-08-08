@@ -53,7 +53,10 @@ body {
   background: #fff !important;
 }
 .mt-10{
-  margin-top: 10px;
+  margin-top: 10px !important;
+}
+.pl-30{
+  padding-left: 30px !important;
 }
 .el-message-box{
   width: 330px !important;

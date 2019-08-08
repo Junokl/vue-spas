@@ -1,8 +1,8 @@
 <template>
 	<section class="sec-all-order">
-		<a href="/#/orders" class="title">
-			我的订单
-			<span class="right">
+		<a href="/" class="title">
+			累计收益（元）
+			<!-- <span class="right">
 				<span>查看全部</span>
 				<span class="SVGInline"><svg class="SVGInline-svg" style="width: 0.6rem;height: 0.6rem;"
 					 viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
@@ -10,22 +10,22 @@
 						 fill="#999" fill-rule="evenodd"></path>
 					</svg>
 				</span>
-			</span>
+			</span> -->
 		</a>
-		<a href="/#/orders" class="title">
+		<a href="/" class="title">
 			0.00
 		</a>
-		<ul href="/#/orders" class="title">
+		<ul href="/" class="title">
 			<li class="fl">本月销售额</li>
 			<li class="fl" @click="toOrderMonth" data-track="Ordermonth">本月订单</li>
 			<li class="fl">余额</li>
 			<li class="fl">今日客户</li>
 		</ul>
-		<ul href="/#/orders" class="title">
-			<li class="fl">0.00</li>
-			<li class="fl">0</li>
-			<li class="fl">0.00</li>
-			<li class="fl">0</li>
+		<ul href="/" class="title ">
+			<li class="fl pl-30 wd-25">0.00</li>
+			<li class="fl pl-30 wd-25">0</li>
+			<li class="fl pl-30 wd-25">0.00</li>
+			<li class="fl pl-30 wd-25">0</li>
 		</ul>
 	</section>
 </template>
@@ -45,4 +45,7 @@ export default {
 
 <style scoped>
 /* @import url("../assets/sec.css"); */
+.wd-25{
+	width: 25%;
+}
 </style>

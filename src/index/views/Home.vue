@@ -38,12 +38,12 @@
       <div class="tips" v-show="list1==null||list1.length<0">暂无订单!</div>
     </div>
     <!-- 指派员工 -->
-    <div class="assignEmployees" v-show="employees">
+    <div class="assignEmployees" v-if="tab==0" v-show="employees">
       <div class="employees-title">指派提车员</div>
       <div class="Eitembox" v-for="(yuan,index) in y" :key="index">
-        <img :src="yuan.url" class="yuanImg">
+        <img src="../../assets/images/logo.png" class="yuanImg">
         <div class="yuanname">{{yuan.name}}</div>
-        <div class="zhipai">指派</div>
+        <div class="zhipai" @click="submitAjax">指派</div>
       </div>
 
     </div>
@@ -135,8 +135,8 @@ import Xnavbar from "../../components/home/Xnavbar1.vue";
 export default {
   data() {
     return {
-      employees:true,//员工status
-      showorder: false,//弹窗status
+      employees: false, //员工status
+      showorder: false, //弹窗status
       tab: 0,
       tabs: [
         { id: 0, name: "待接受" },
@@ -156,7 +156,10 @@ export default {
           chadui: "加急"
         }
       ],
-      y:[{url:'../../assets/images/logo.png',name:'哈哈哈',},{url:'../../assets/images/logo.png',name:'哈哈哈',},],
+      y: [
+        { url: "../../assets/images/logo.png", name: "哈哈哈" },
+        { url: "../../assets/images/logo.png", name: "哈哈哈" }
+      ],
       list2: null,
       list3: [
         {
@@ -192,7 +195,7 @@ export default {
     },
     setOrder() {
       var self = this;
-      console.log('接受订单')
+      console.log("接受订单");
       self.employees = true;
       // axios
       //   .get("./home.json")
@@ -204,30 +207,59 @@ export default {
       //   });
     },
     removeOrder() {
-        this.$confirm('拒绝后此订单取消, 是否继续?', '提示', {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
+      this.$confirm("拒绝后此订单取消, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
           // axios
-      //   .get("./home.json")
-      //   .then(function(response) {
-      //     // console.log(response.data)
-      //   })
-      //   .catch(function(error) {
-      //     console.log(error);
-      //   });
+          //   .get("./home.json")
+          //   .then(function(response) {
+          //     // console.log(response.data)
+          //   })
+          //   .catch(function(error) {
+          //     console.log(error);
+          //   });
           this.$message({
-            type: 'success',
-            message: '拒绝成功!'
+            type: "success",
+            message: "拒绝成功!"
           });
-        }).catch(() => {
+        })
+        .catch(() => {
           this.$message({
-            type: 'info',
-            message: '已取消拒绝'
-          });          
+            type: "info",
+            message: "已取消拒绝"
+          });
         });
-      }
+    },
+    submitAjax() {
+      this.$confirm("确认指派此员工, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          // axios
+          //   .get("./home.json")
+          //   .then(function(response) {
+          //     // console.log(response.data)
+          //   })
+          //   .catch(function(error) {
+          //     console.log(error);
+          //   });
+          this.$message({
+            type: "success",
+            message: "指派成功!"
+          });
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "取消指派"
+          });
+        });
+    }
   },
   mounted() {
     console.log(`这个是默认页面的主页：${this.$store.state.myname}`);
@@ -247,7 +279,7 @@ export default {
 body {
   background: #fff !important;
 }
-.el-message-box{
+.el-message-box {
   width: 330px !important;
 }
 /* 弹窗 */
@@ -293,10 +325,10 @@ body {
   justify-content: center;
   padding: 0 15px;
 }
-.order-name {
+/* .order-name {
 }
 .order-address {
-}
+} */
 .bottom-top,
 .bottom-bottom {
   flex: 1;
@@ -415,33 +447,38 @@ body {
   color: #1890ff;
   border-bottom: 2px solid #1890ff;
 }
-.assignEmployees{
+.assignEmployees {
   width: 90%;
   margin: 10px auto 0;
   box-shadow: 0px 1px 1px 2px rgba(170, 170, 170, 0.41);
   border: 1px solid rgba(255, 255, 255, 0);
   padding: 5px 15px;
 }
-.assignEmployees:last-child{
+.assignEmployees:last-child {
   border: none;
 }
-.Eitembox{
+.Eitembox {
   display: flex;
   border-bottom: 1px solid #333;
   align-items: center;
   padding: 10px;
 }
-.yuanImg{
+.Eitembox:last-child {
+  border-bottom: none;
+}
+.yuanImg {
   width: 30px;
   height: 30px;
-  flex: 1;
+  /* flex: 1; */
   border-radius: 50%;
 }
-.yuanname{
-  flex: 2;
+.yuanname {
+  flex: 3;
   border-right: 1px solid #666;
+  padding-left: 15px;
 }
-.zhipai{
+.zhipai {
   flex: 1;
+  text-align: center;
 }
 </style>

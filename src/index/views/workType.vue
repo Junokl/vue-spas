@@ -12,25 +12,20 @@
         </div>
         
 
-        <el-table
-      :data="tableData"
-      style="width: 100%">
-      <el-table-column
-        prop="date"
-        label="工种"
-        width="140">
-      </el-table-column>
-      <el-table-column
-        prop="name"
-        label="名称"
-        width="140">
-      </el-table-column>
-      <el-table-column
-        prop="address"
-        label="对应数量">
-      </el-table-column>
-      <!-- <el-input-number v-model="tableData[address]" @change="handleChange" :min="1" :max="10" label="描述文字"></el-input-number> -->
-    </el-table>
+        <div class="table">
+          <div class="tab-top">
+            <div class="topitem">工种</div>
+            <div class="topitem">名称</div>
+            <div class="topitem">默认当前设置</div>
+          </div>
+          <div class="tab-bottom" v-for="(item,index) in tableData" :key="index">
+            <div class="bottomitem">{{item.date}}</div>
+            <div class="bottomitem">{{item.name}}</div>
+            <!-- <div class="topitem"> v-model="value2" -->
+              <el-input-number class="bottomitem" v-model="item.number" controls-position="right" @change="handleChange" :min="5" :max="100"><span>人</span></el-input-number><span>人</span>
+            <!-- </div> -->
+          </div>
+        </div>
     <div class="btn-yes">确认</div>
 	</div>
 </template>
@@ -46,22 +41,22 @@ export default {
         {
           date: "工种A",
           name: "王小虎",
-          address: "5"
+          number: "5"
         },
         {
           date: "工种A",
           name: "王小虎",
-          address: "5"
+          number: "6"
         },
         {
           date: "工种A",
           name: "王小虎",
-          address: "5"
+          number: "7"
         },
         {
           date: "工种A",
           name: "王小虎",
-          address: "5"
+          number: "8"
         }
       ],
       pickerOptions: {
@@ -90,11 +85,12 @@ export default {
           }]
         },
         value1: '',
+        value2: '5',
     };
   },
   methods: {
     handleChange(value) {
-      console.log(value);
+        console.log(value);
     },
     getData(){
         console.log(this.data)
@@ -115,25 +111,24 @@ export default {
   text-align: center;
   margin: 15px 0;
 }
-.el-table {
+.table{
   width: 100%;
-  color: #000 !important;
+  margin: 20px 0;
+  padding: 5px 20px;
 }
-.el-table__header-wrapper {
-  width: 100%;
+.tab-top,.tab-bottom{
+  display: flex;
 }
-.el-table__body-wrapper {
-  width: 100%;
+.topitem,.bottomitem{
+  flex: 1;
 }
-.el-table--scrollable-x .el-table__body-wrapper > table {
-  /* width: 100%; */
+.bottomitem{
+  height: 40px;
+  line-height: 40px;
 }
-.el-table--scrollable-x .el-table__body-wrapper > table > tbody > tr {
-  height: 50px;
-}
-.el-table--scrollable-x .el-table__body-wrapper > table > tbody > tr > td {
-  width: 90px;
-  padding: 0;
+.tab-bottom>span{
+  line-height: 40px;
+  padding-left: 4px;
 }
 .btn-yes {
   margin: 50px auto;

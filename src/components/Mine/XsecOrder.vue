@@ -1,7 +1,9 @@
 <template>
 	<section class="sec-order">
 		<div class="list-item">
-			<a class="to-pay" href="/workType"><span class="SVGInline"><svg class="SVGInline-svg"
+			<a class="to-pay" href="/workType">
+			<span class="SVGInline">
+				<svg class="SVGInline-svg"
 					 style="width: 1.3rem;height: 1.3rem;" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<defs>
 							<linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="id-17a">
@@ -9,9 +11,12 @@
 								<stop stop-color="#C3902C" offset="100%"></stop>
 							</linearGradient>
 						</defs>
-						<path d="M128 342.881v-.119h-5.067a2.923 2.923 0 0 0-2.933 2.925 2.931 2.931 0 0 0 2.933 2.925h3.345A9.99 9.99 0 0 1 118 353c-5.523 0-10-4.477-10-10v-4.65h20v4.531zm-4.5 4.269c-.828 0-1.5-.655-1.5-1.463s.672-1.462 1.5-1.462 1.5.654 1.5 1.462c0 .808-.672 1.463-1.5 1.463zM117.013 337l4.889-4 3.442 4h-8.331zm.506-1.894L115.205 337h-2.416l1.504-3.294 3.226 1.4z"
-						 transform="translate(-105 -330)" fill="url(#id-17a)" fill-rule="evenodd"></path>
-					</svg></span><strong>工种设置</strong></a>
+					<path d="M128 342.881v-.119h-5.067a2.923 2.923 0 0 0-2.933 2.925 2.931 2.931 0 0 0 2.933 2.925h3.345A9.99 9.99 0 0 1 118 353c-5.523 0-10-4.477-10-10v-4.65h20v4.531zm-4.5 4.269c-.828 0-1.5-.655-1.5-1.463s.672-1.462 1.5-1.462 1.5.654 1.5 1.462c0 .808-.672 1.463-1.5 1.463zM117.013 337l4.889-4 3.442 4h-8.331zm.506-1.894L115.205 337h-2.416l1.504-3.294 3.226 1.4z"
+					transform="translate(-105 -330)" fill="url(#id-17a)" fill-rule="evenodd"></path>
+				</svg>
+			</span>
+			<strong>工种设置</strong>
+			</a>
 					<a class="await" href="/mystore"><span class="SVGInline"><svg
 					 class="SVGInline-svg" style="width: 1.3rem;height: 1.3rem;" width="26" height="26" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
 						<defs>
